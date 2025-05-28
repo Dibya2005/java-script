@@ -1,0 +1,37 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p id="myPara">
+        This element     has <span>spacing</span>
+    </p>
+
+
+
+    <script>
+      //Selecting the element with id "myPara"
+          let myElement = document.getElementById("myPara");
+      
+          //Now retrieving outerHTML of the selected element
+          let content = myElement.outerHTML;
+      
+          console.log(content);
+      
+          /* Output:
+          <p id="myPara">
+              This element     has <span>spacing</span>
+          </p>
+          */
+      
+      //Let's try to change the content of selected element
+      // Setting outerHTML content (replaces the entire element)
+          let newPara = '<div>Hiii</div>';
+          myElement.outerHTML = newPara;
+    </script>
+</body>
+</html>

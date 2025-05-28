@@ -1,0 +1,33 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <p id="myPara">
+        This element     has <span>spacing</span>
+    </p>
+
+
+    <script>
+      //Selecting the element with id "myPara"
+          let myElement = document.getElementById("myPara");
+      
+          //Now retrieving innerHTML of the selected element
+          let content = myElement.innerHTML;
+      
+          console.log(content);
+      
+          /* Output:
+          This element     has <span>spacing</span>
+          */
+      
+      //Let's try to change the content of selected element
+          let newPara = "Hello Dosto";
+          myElement.innerHTML = newPara;
+      </script>
+</body>
+</html>

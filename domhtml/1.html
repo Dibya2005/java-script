@@ -1,0 +1,30 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding JavaScript</title>
+</head>
+<body>
+    <h1 id="codehelp">Welcome to CodeHelp</h1>
+
+    <p>Welcome to CodeHelp1</p>
+    <p>Welcome to CodeHelp2</p>
+    <p>Welcome to CodeHelp3</p>
+    <p>Welcome to CodeHelp4</p>
+    <p>Welcome to CodeHelp5</p>
+
+    <h3>Welcome to CodeHelp</h3>
+    <script src="addele.js"></script>
+
+    <script>
+    //Let's Select the elements with <p></p> tag
+        let element = document.getElementsByTagName("p");
+        console.log(element); // Returns an array
+
+        element[1].style.backgroundColor = "lightgreen";
+        element[3].style.backgroundColor = "yellow";
+    </script>
+</body>
+</html>

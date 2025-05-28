@@ -1,0 +1,38 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <div id="myPara">
+        This element     has <span>spacing</span>
+
+        <p style="display: none">This has a property Hidden</p>
+    </div>
+
+
+
+    <script>
+      //Selecting the element with id "myPara"
+          let myElement = document.getElementById("myPara");
+      
+          //Now retrieving textContent of the selected element
+          let content = myElement.textContent;
+      
+          console.log(content);
+      
+          /* Output:
+              This element     has spacing
+      
+              This has a property Hidden
+          */
+      
+      //Let's try to change the content of selected element
+          let newPara = 'Hiii';
+          myElement.textContent = newPara;
+      </script>
+</body>
+</html>

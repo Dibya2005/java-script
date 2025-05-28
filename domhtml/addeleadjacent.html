@@ -1,0 +1,28 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert Adjacent Element Before Begin</title>
+</head>
+<body>
+
+<div id="container">
+  <div id="existingElement">Existing Element</div>
+</div>
+
+<script>
+  // Create a new element
+  var newElement = document.createElement("div");
+  newElement.textContent = "Welcome to CodeHelp";
+
+  // Get the reference to the existing element
+  var existingElement = document.getElementById("existingElement");
+
+  // Insert the new element before the existing element
+  existingElement.insertAdjacentElement('beforebegin', newElement);
+</script>
+
+</body>
+</html>
