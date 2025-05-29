@@ -1,0 +1,48 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding the Class Name</title>
+</head>
+<body>
+  <div id="babbar" class="class1 class2 class3">
+    Hello Guys this is love Babbar!
+  </div>
+
+
+  <script>
+    //Get the element from the HTML DOM using 'getElementById' method
+    let myElement = document.getElementById("babbar");
+
+    //Print all the classes using 'classList' method
+    let existingClasses = myElement.classList;
+    console.log(existingClasses);
+/* OUTPUT : 
+    DOMTokenList(3) ['class1', 'class2', 'class3', value: 'class1 class2 class3']
+      0: "class1"
+      1: "class2"
+      2: "class3"
+      length: 3
+      value: "class1 class2 class3"
+      [[Prototype]]: DOMTokenList
+*/
+
+    //We can add new classes
+    myElement.classList.add('class4');
+    
+    //We can remove the existing class
+    myElement.classList.remove('class2');
+    console.log(myElement);
+
+    //We can check if the specific classname is present of not
+    let isPresent = myElement.classList.contains('class2');
+    console.log(isPresent); //False
+
+    //We can also toggle the classes
+    myElement.classList.toggle('class5');
+
+  </script>
+</body>
+</html>

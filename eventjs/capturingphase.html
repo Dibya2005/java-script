@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Phases Example</title>
+</head>
+<body>
+  <div id="outer">
+    <div id="middle">
+      <button id="inner">Click Me</button>
+    </div>
+  </div>
+
+  <script>
+    const outer = document.getElementById('outer');
+    const middle = document.getElementById('middle');
+    const inner = document.getElementById('inner');
+
+    outer.addEventListener('click', function() {
+      console.log('Capturing phase: Outer');
+    }, true); // 'true' specifies capturing phase
+
+    middle.addEventListener('click', function() {
+      console.log('Capturing phase: Middle');
+    }, true);
+
+    inner.addEventListener('click', function() {
+      console.log('Target phase: Inner');
+    });
+
+    outer.addEventListener('click', function() {
+      console.log('Bubbling phase: Outer');
+    });
+
+    middle.addEventListener('click', function() {
+      console.log('Bubbling phase: Middle');
+    });
+
+    inner.addEventListener('click', function() {
+      console.log('Bubbling phase: Inner');
+    }, true); // 'true' specifies capturing phase
+  </script>
+</body>
+</html>

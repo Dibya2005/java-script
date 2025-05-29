@@ -1,0 +1,35 @@
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding the Class Name</title>
+</head>
+<body>
+  <div id="babbar">
+    Hello Guys this is love Babbar!
+  </div>
+
+
+  <script>
+    //Get the element from the HTML DOM using 'getElementById' method
+    let myElement = document.getElementById("babbar");
+
+    //Now we can add multiple class names to it if there is no class
+    myElement.className += 'class1 class3'
+
+
+    //We can also replace an existing class with a new class
+    myElement.classList = myElement.className.replace("class1", 'class2');
+    console.log(myElement);
+
+    /*
+    Output:
+      <div id="babbar" class="class2 class3">
+        Hello Guys this is love Babbar!
+      </div>
+    */
+  </script>
+</body>
+</html>
